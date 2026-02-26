@@ -17,11 +17,27 @@ function setup() {
 
 function draw() {
     background(255);
-    drawStart();
-    // thePlayer.draw();
-    // thePlayer.move();
-    // drawWin();
-    // drawDied();
+    //drawStart();
+     thePlayer.draw();
+     thePlayer.move();
+     drawWin();
+     drawDied();
+     drawPlaying();
+     switch (state){
+        case "START":
+            console.log(drawStart);
+            break;
+        case "PLAYING":
+            console.log(drawPlaying);
+            break;
+        case "WIN":
+            console.log(drawWin);
+            break;
+        case "DIED":
+            console.log(drawDied);
+            break;
+     }
+
 }
 
 function keyPressed() {
